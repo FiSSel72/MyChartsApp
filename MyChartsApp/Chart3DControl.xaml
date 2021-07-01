@@ -6,31 +6,43 @@
              xmlns:local="clr-namespace:MyChartsApp"
              xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="450" d:DesignWidth="1000">
     <Grid>
         <StackPanel>
-            <Label Margin="10">Second 3D Linear Chart</Label>
-            <Button Height="20"
-                    Width="50" 
+            <Label Margin="10 0 0 0" Foreground="LightGray" FontSize="18">3D Chart</Label>
+            <Button Height="30"
+                    Width="160" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
-                    Margin="10"
-                    Content="Switch2"
-                    Command="{Binding SwitchWindowCommand}"/>
-            <chart:SfChart3D Height="350" Margin="7" EnableRotation="True">
+                    FontSize="15"
+                    Margin="10 0 0 0"
+                    Content="Switch to simple chart"
+                    Command="{Binding SwitchWindowCommand}"
+                    BorderBrush="LightGray"/>
+            <chart:SfChart3D Height="360" EnableRotation="True" 
+                             BackWallBrush="Transparent"
+                             LeftWallBrush="Transparent"
+                             RightWallBrush="Transparent"
+                             BottomWallBrush="Transparent"
+                             Foreground="LightGray"
+                             Margin="10">
                 <chart:SfChart3D.PrimaryAxis>
-                    <chart:CategoryAxis3D />
+                    <chart:CategoryAxis3D Foreground="LightGray"/>
                 </chart:SfChart3D.PrimaryAxis>
                 
                 <chart:SfChart3D.SecondaryAxis>
-                    <chart:NumericalAxis3D Minimum="0"/>
+                    <chart:NumericalAxis3D Minimum="0" Foreground="LightGray" />
                 </chart:SfChart3D.SecondaryAxis>
                 
                 <chart:SfChart3D.Legend>
-                    <chart:ChartLegend CheckBoxVisibility="Visible"/>
+                    <chart:ChartLegend CheckBoxVisibility="Visible" Foreground="LightGray"/>
                 </chart:SfChart3D.Legend>
-                
-                <chart:LineSeries3D Label="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ItemsSource="{Binding Models, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" XBindingPath="Year" YBindingPath="BTC">
+
+                <chart:LineSeries3D Label="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                    ItemsSource="{Binding Models, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    XBindingPath="Year"
+                                    YBindingPath="BTC"
+                                    >
                 </chart:LineSeries3D>
             </chart:SfChart3D>
         </StackPanel>

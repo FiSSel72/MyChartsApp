@@ -6,31 +6,35 @@
              xmlns:local="clr-namespace:MyChartsApp"
              xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="450" d:DesignWidth="1000">
     <Grid>
         <StackPanel>
-            <Label Margin="10">First Simple Linear Chart</Label>
-            <Button Height="20" 
-                    Width="50" 
+            <Label Margin="10 0 0 0" Foreground="LightGray" FontSize="18">Simple Chart</Label>
+            <Button Height="30" 
+                    Width="160" 
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
-                    Margin="10"
-                    Content="Switch1"
-                    Command="{Binding SwitchWindowCommand}"/>
-            <chart:SfChart Height="350" Margin="7">
+                    FontSize="15"
+                    Margin="10 0 0 0"
+                    Content="Switch to 3D Chart"
+                    Command="{Binding SwitchWindowCommand}"
+                    BorderBrush="LightGray"/>
+            <chart:SfChart Height="360"
+                           Margin="10"
+                           >
                 <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis/>
+                    <chart:CategoryAxis Foreground="LightGray"/>
                 </chart:SfChart.PrimaryAxis>
 
                 <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis Minimum="0"/>
+                    <chart:NumericalAxis Minimum="0" Foreground="LightGray"/>
                 </chart:SfChart.SecondaryAxis>
 
                 <chart:SfChart.Legend>
-                    <chart:ChartLegend CheckBoxVisibility="Visible"/>
+                    <chart:ChartLegend CheckBoxVisibility="Visible" Foreground="LightGray"/>
                 </chart:SfChart.Legend>
-            
-            <chart:LineSeries Label="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                
+                <chart:LineSeries Label="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
                               ItemsSource="{Binding Models, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
                               XBindingPath="Year" 
                               YBindingPath="BTC"
