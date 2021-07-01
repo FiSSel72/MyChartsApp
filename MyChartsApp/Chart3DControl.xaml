@@ -21,12 +21,15 @@
                 <chart:SfChart3D.PrimaryAxis>
                     <chart:CategoryAxis3D />
                 </chart:SfChart3D.PrimaryAxis>
+                
                 <chart:SfChart3D.SecondaryAxis>
-                    <chart:NumericalAxis3D/>
+                    <chart:NumericalAxis3D Minimum="0"/>
                 </chart:SfChart3D.SecondaryAxis>
+                
                 <chart:SfChart3D.Legend>
-                    <chart:ChartLegend/>
+                    <chart:ChartLegend CheckBoxVisibility="Visible"/>
                 </chart:SfChart3D.Legend>
+                
                 <chart:LineSeries3D Label="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ItemsSource="{Binding Models, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" XBindingPath="Year" YBindingPath="BTC">
                 </chart:LineSeries3D>
             </chart:SfChart3D>

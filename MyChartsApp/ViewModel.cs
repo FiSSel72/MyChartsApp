@@ -95,7 +95,7 @@ namespace MyChartsApp
                 if(c==0)
                 {
                     Name = Convert.ToString(data[0])+"/"+ Convert.ToString(data[1]);
-            c++;
+                    c++;
                     return new Model(null,null);
                 }
                 else
