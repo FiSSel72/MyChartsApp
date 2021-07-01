@@ -40,7 +40,25 @@
                               YBindingPath="BTC"
                               >
                     <chart:LineSeries.Trendlines>
-                        <chart:Trendline Label="Global Trendline" IsTrendlineVisible="False"/>
+                        <chart:Trendline Label="Linear Trendline" 
+                                         IsTrendlineVisible="False" 
+                                         Type="Linear"/>
+                        <chart:Trendline Label="Exponential Trendline" 
+                                         IsTrendlineVisible="False" 
+                                         Type="Exponential"
+                                         Stroke="LightGreen"/>
+                        <chart:Trendline Label="Polynomial Trendline" 
+                                         IsTrendlineVisible="False" 
+                                         Type="Polynomial"
+                                         Stroke="LightPink"/>
+                        <chart:Trendline Label="Power Trendline" 
+                                         IsTrendlineVisible="False" 
+                                         Type="Power"
+                                         Stroke="Yellow"/>
+                        <chart:Trendline Label="Logarithmic Trendline" 
+                                         IsTrendlineVisible="False" 
+                                         Type="Logarithmic"
+                                         Stroke="LightSalmon"/>
                     </chart:LineSeries.Trendlines>
             </chart:LineSeries>
             </chart:SfChart>
